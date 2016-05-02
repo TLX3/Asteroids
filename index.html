@@ -12,10 +12,12 @@
     <script src="lib/ship.js"></script>
   </head>
   <body>
-    <canvas id="game-canvas" width="900" height="600"></canvas>
+    <canvas id="game-canvas"></canvas>
     <script>
       var canvas = document.getElementById("game-canvas");
       var ctx = canvas.getContext("2d");
+      ctx.canvas.width = window.innerWidth;
+      ctx.canvas.height = window.innerHeight;
       var game = new Asteroids.Game();
       var gameView = new Asteroids.GameView(game, ctx);
       gameView.start();

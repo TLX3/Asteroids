@@ -7,10 +7,13 @@
     html, body, canvas {
         padding: 0px;
         margin: 0px;
-       }
+    }
     canvas {
       background:url(./images/background.png);
       background-size: 100%;
+    }
+    .hidden {
+      display: none;
     }
     </style>
   </head>
@@ -26,6 +29,9 @@
     <script src="lib/gameView.js"></script>
     <script src="lib/ship.js"></script>
 
+    <img src="./images/ship.png" class="hidden" id="ship">
+    <img src="./images/asteroid.png" class="hidden" id="asteroid">
+    <img src="./images/bullet.png" class="hidden" id="bullet">
     <script>
       var canvas = document.getElementById("game-canvas");
       var ctx = canvas.getContext("2d");
